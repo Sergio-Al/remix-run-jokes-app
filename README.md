@@ -51,3 +51,43 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+### prisma configuration
+
+This project is using prisma as ORM to our Database
+we are using MySQL
+
+we initialize with mysql with this command
+
+```
+npx prisma init --datasource-provider mysql
+```
+
+for more info are on the Prisma docs [Prisma Schema reference](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference)
+
+To Create/Run the database and all changes run this:
+
+```
+npx prisma db push
+```
+
+Remember to hide the .env file in your local machine it must be configured as follows (in mysql case):
+
+```
+DATABASE_URL="<YOUR DATABASE (EG. mysql)://<YOUR USER>:<YOUR PASSWORD>@<YOUR HOST>:<YOUR PORT>/<YOUR DATABASE NAME>"
+```
+
+Again, for more info go to docs [Prisma Schema reference](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference)
+
+We created a seed.ts file in the prisma directory to have initial data
+
+We added a new configuration in package.json to consume our seed.ts file for initial data
+
+```
+// ...
+  "prisma": {
+    "seed": "node --require esbuild-register prisma/seed.ts"
+  },
+  "scripts": {
+// ...
+```
