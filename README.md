@@ -52,7 +52,7 @@ rm -rf app
 cp -R ../my-old-remix-app/app app
 ```
 
-### prisma configuration
+## Database Prisma configuration
 
 This project is using prisma as ORM to our Database
 we are using MySQL
