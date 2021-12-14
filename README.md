@@ -74,7 +74,7 @@ npx prisma db push
 Remember to hide the .env file in your local machine it must be configured as follows (in mysql case):
 
 ```
-DATABASE_URL="<YOUR DATABASE (EG. mysql)://<YOUR USER>:<YOUR PASSWORD>@<YOUR HOST>:<YOUR PORT>/<YOUR DATABASE NAME>"
+DATABASE_URL="<YOUR DATABASE (EG. mysql)>://<YOUR USER>:<YOUR PASSWORD>@<YOUR HOST>:<YOUR PORT>/<YOUR DATABASE NAME>"
 ```
 
 Again, for more info go to docs [Prisma Schema reference](https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference)
