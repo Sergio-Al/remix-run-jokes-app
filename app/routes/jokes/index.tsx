@@ -18,7 +18,7 @@ export const loader: LoaderFunction = async () => {
 
 export default function JokesIndexRoute() {
   const data = useLoaderData<LoaderData>();
-  
+
   return (
     <div>
       <p>Here's a random joke:</p>
@@ -26,4 +26,8 @@ export default function JokesIndexRoute() {
       <Link to={data.randomJoke.id}>"{data.randomJoke.name}" PermaLink</Link>
     </div>
   );
+}
+
+export function ErrorBoundary() {
+  return <div className="error-container">I did a whoopsies.</div>;
 }
