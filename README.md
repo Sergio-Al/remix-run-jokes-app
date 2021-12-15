@@ -91,3 +91,11 @@ We added a new configuration in package.json to consume our seed.ts file for ini
   "scripts": {
 // ...
 ```
+## Environment variables
+
+We are working with this data in our .env file
+
+```
+DATABASE_URL="<YOUR DATABASE (EG. mysql)>://<YOUR USER>:<YOUR PASSWORD>@<YOUR HOST>:<YOUR PORT>/<YOUR DATABASE NAME>"
+SESSION_SECRET="<YOUR SECRET MESSAGE FOR THE SESSION, WHATEVER YOU LIKE>"
+```
