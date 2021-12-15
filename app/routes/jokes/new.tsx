@@ -54,8 +54,7 @@ export const action: ActionFunction = async ({ request }) => {
   }
 
   const joke = await db.joke.create({
-    data: { ...fields },
-    jokesterId: userId,
+    data: { ...fields, jokesterId: userId },
   });
   return redirect(`/jokes/${joke.id}`);
 };

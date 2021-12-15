@@ -14,7 +14,7 @@ export async function register({ username, password }: LoginForm) {
   });
 }
 
-export async function login({ username, password }): LoginForm {
+export async function login({ username, password }: LoginForm) {
   const user = await db.user.findUnique({
     where: { username },
   });
