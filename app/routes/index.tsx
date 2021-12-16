@@ -1,9 +1,16 @@
-import type { LinksFunction } from "remix";
+import type { LinksFunction, MetaFunction } from "remix";
 import { Link } from "remix";
 import stylesUrl from "../styles/index.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
+};
+
+export const meta: MetaFunction = () => {
+  return {
+    title: "Remix: So great, it's funny!",
+    description: "Remix jokes app. Learn Remix and laught at the same time",
+  };
 };
 
 export default function IndexRoutes() {
