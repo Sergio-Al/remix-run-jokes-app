@@ -1,6 +1,7 @@
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
+- A Framework that uses React-TS for a better strong type safe variables
 
 ## Development
 
